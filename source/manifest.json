@@ -1,0 +1,53 @@
+{
+	"name": "Yaykoop Extension",
+	"version": "1.0.1",
+	"description": "An awesome browser extension that checks if a book is available on YayKoop site",
+	"homepage_url": "https://github.com/canozmen/yaykoop-bext-v2",
+	"manifest_version": 2,
+	"minimum_chrome_version": "74",
+	"applications": {
+		"gecko": {
+			"id": "yaykoopextension@gmail.com",
+			"strict_min_version": "67.0"
+		}
+	},
+	"icons": {
+		"128": "icon.png"
+	},
+	"permissions": [
+		"storage"
+	],
+	"background": {
+		"persistent": false,
+		"scripts": [
+			"background.js"
+		]
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*.idefix.com/*",
+				"*://*.amazon.com.tr/*",
+				"*://*.dr.com.tr/*",
+				"*://*.bkmkitap.com/*",
+				"*://*.hepsiburada.com/*",
+				"*://*.idealkitap.com/*",
+				"*://*.ilknokta.com/*",
+				"*://*.istanbulkitapcisi.com/*",
+				"*://*.kitapkoala.com/*",
+				"*://*.kitapyurdu.com/*",
+				"*://*.kidega.com/*",
+				"*://*.kirmizikedi.com/*",
+				"*://*.kitap16.com/*",
+				"*://*.kitapzen.com/*",
+				"*://*.kitapmatik.com.tr/*",
+				"*://*.liderkitap.com/*",
+				"*://*.n11.com/*",
+				"*://*.pandora.com.tr/*",
+				"*://*.trendyol.com/*",
+				"*://*.ucuzkitapal.com/*"
+			],
+			"js": [ "content.js" ]
+		}
+	]
+}
